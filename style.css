@@ -1,0 +1,28 @@
+body {
+    background-color: #E9EAED;
+    font-family: Droid Sans, Trebuchet MS;
+}
+.code {
+    white-space: pre-line;
+    background-color: white;
+    width: 700px;
+    padding-left: 30px;
+}
+.code .output {
+    margin-left: 50px;
+    color: #00c7ff;
+}
+.inlineCode {
+    background-color: #e8ef88;
+    /*border: 1px solid black;*/
+    padding: 2px;
+    font-style: italic;
+    margin-right: 2px;
+    padding-top: 0px;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
