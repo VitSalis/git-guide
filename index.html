@@ -256,13 +256,14 @@
             <li>Τα project που δημοσιοποιούνται είναι πιθανότατα πιο ασφαλή διότι η κοινότητα βοηθάει να βρεθούν λάθη.</li>
         </ul>
         <p>Σε αυτόν τον οδηγό θα χρησιμοποιήσω το <a href="https://github.com">GitHub</a>. Μπορείτε να δημιουργήσετε ένα git repository εκεί χρησιμοποιώντας αυτόν τον <a href="https://help.github.com/articles/create-a-repo">οδηγό</a> ή σε οποιονδήποτε άλλον host θέλετε.</p>
-        <p>Το git περιέχει remotes. Ένα remote περιέχει το URL ενός online git repository. Ουσιαστικά ένα remote είναι ένας σύνδεσμος. Συνδέει το τοπικό git repository με το online git repository ώστε να μπορούμε να ανεβάσουμε τις αποθηκευμένες εικόνες μας εκεί. Το online git repository περιέχει όλες τις εικόνες που έχουμε αποφασίσει να ανεβάσουμε.</p>
-        <p>Αν εκτελέσουμε την εντολή <span class="inlineCode">git remote</span> μας εμφανίζει μια λίστα από τα remotes που έχει το git repository μας.</p>
+        <p>Όλα τα git repositories είναι ίσα. Εμείς απλά τα συγχρονίζουμε μεταξύ τους. Αυτό είναι χρήσιμο ώστε να μπορούμε να έχουμε περισσότερα απο ένα online git repositories. Για να μην χρησιμοποιούμε το URL του online git repository που θέλουμε να χρησιμοποιήσουμε κάθε φορά, το git μας επιτρέπει να αποθηκεύσουμε ένα όνομα για κάθε URL ενός online git repository που θέλουμε να χρησιμοποιήσουμε.</p>
+        <p>Αυτός ο συνδιασμός όνομα-URL είναι ένα remote.</p>
+        <p>Αν εκτελέσουμε την εντολή <span class="inlineCode">git remote</span> μας εμφανίζει μια λίστα από τα ονόματα των remotes που έχει το git repository μας.</p>
         <div class="code">
             ~/cats $  git remote
             ~/cats $
         </div>
-        <p>Όπως βλέπετε δεν μας βγάζει κανένα remote γιατί δεν έχουμε δημιουργήσει κανένα. Για να δημιουργήσουμε ένα χρησιμοποιούμε την εντολή <span class="inlineCode">git remote add [remote_name] [url]</span> όπου <span class="inlineCode">remote_name</span> το όνομα που δίνουμε στο remote και <span class="inlineCode">url</span> το URL του remote.</p>
+        <p>Όπως βλέπετε δεν μας βγάζει κανένα όνομα γιατί δεν έχουμε δημιουργήσει κανένα remote. Για να δημιουργήσουμε ένα χρησιμοποιούμε την εντολή <span class="inlineCode">git remote add [remote_name] [url]</span> όπου <span class="inlineCode">remote_name</span> το όνομα που δίνουμε στο remote και <span class="inlineCode">url</span> το URL του remote.</p>
         <div class="code">
             ~/cats $  git remote add origin git@github.com:VitSalis/git-guide.git
             ~/cats $  git remote
