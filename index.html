@@ -33,7 +33,7 @@
         <p>Στον φάκελο «cats», όπως προδίδει το όνομα, θα αποθηκεύουμε πράγματα σχετικά με γάτες. Θα φτιάξουμε δύο υποφάκελους, τους «mitsos» και «giannis» οι οποίοι περιέχουν πληροφορίες για τις δυο γάτες μου, τον Μήτσο και τον Γιάννη αντίστοιχα. Κάθε υποφάκελος θα περιέχει ένα αρχείο που ονομάζεται «desc.txt» το οποίο είναι μια περιγραφή της συγκεκριμένης γάτας και ένα δεύτερο αρχείο το οποίο είναι μια εικόνα της γάτας.</p>
         <p>Αυτά είναι τα περιεχόμενα του φακέλου μας.</p>
         <div class="code">
-            $ ~/cats  ls -R
+            ~/cats $  ls -R
             <div class="output">
                 giannis  mitsos
 
@@ -43,18 +43,18 @@
                 ./mitsos:
                 desc.txt  mitsos.jpg
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Για όσους δεν την γνωρίζουν, η εντολή <span class="inlineCode">ls</span> μας εμφανίζει τα περιεχόμενα του φακέλου στον οποίο βρισκόμαστε και αν δώσουμε την παράμετρο <span class="inlineCode">-R</span> μας το κάνει <a href="http://el.wikipedia.org/wiki/%CE%91%CE%BD%CE%B1%CE%B4%CF%81%CE%BF%CE%BC%CE%AE">αναδρομικά</a>.</p>
         <p>Αυτή η κατάσταση του φακέλου και των αρχείων που περιέχει, όπως είπαμε πριν, είναι η εικόνα του φακέλου. Ο μόνος τρόπος για να αλλάξει η εικόνα του φακέλου θα ήταν να κάνουμε κάποια αλλαγή σε αυτόν π.χ να προσθέσουμε ένα αρχείο, να αλλάξουμε το περιεχόμενο κάποιου ήδη υπάρχοντος κλπ.</p>
         <p>Έναν φάκελο στον υπολογιστή μας μπορούμε να τον κάνουμε ένα git repository. Όταν ο φάκελος μας είναι ένα git repository έχουμε όλα τα εργαλεία του git για αυτόν τον φάκελο.</p>
         <p>Για να κάνουμε έναν φάκελο git repository χρησιμοποιούμε την εντολή <span class="inlineCode">git init</span>.</p>
         <div class="code">
-            $ ~/cats  git init
+            ~/cats $  git init
             <div class="output">
                 Initialized empty Git repository in /home/your_username/cats/.git/
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Η έξοδος μας λέει πως ο φάκελος μας έγινε επιτυχώς ένα άδειο (χωρίς καμία αποθηκευμένη εικόνα) git repository δίνοντάς μας πρόσβαση σε όλα τα εργαλεία του git.</p>
         <h2>add</h2>
@@ -65,45 +65,45 @@
         <p>Αυτή τη στιγμή η staging area είναι άδεια διότι δεν έχουμε προσθέσει τίποτα εκεί.</p>
         <p>Εκτελώντας την εντολή <span class="inlineCode">git status -s</span> μπορούμε να δούμε ποια αρχεία έχουν προστεθεί στην staging area και ποια όχι.</p>
         <div class="code">
-            $ ~/cats  git status -s
+            ~/cats $  git status -s
             <div class="output">
                 <span class="red">??</span> giannis/
                 <span class="red">??</span> mitsos/
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Τα ερωτηματικά δείχνουν πως οι φάκελοι «mitsos» και «giannis» δεν έχουν προστεθεί στην staging area.</p>
         <p>Αφού επιβεβαιώσαμε ότι οι φάκελοί μας δεν έχουν προστεθεί στην staging area, ας τους προσθέσουμε.</p>
         <p>Για να τους προσθέσουμε χρησιμοποιούμε την εντολή <span class="inlineCode">git add</span>.</p>
         <p>Στην εντολή add μπορούμε να δώσουμε το όνομα του αρχείου ή φακέλου που θέλουμε να προσθέσουμε ή <span class="inlineCode">.</span> για να προσθέσουμε όλα τα αρχεία και φακέλους που δεν έχουν προστεθεί ήδη.</p>
         <div class="code">
-            $ ~/cats  git add .
-            $ ~/cats
+            ~/cats $  git add .
+            ~/cats $
         </div>
         <p>Ας επιβεβαιώσουμε ότι οι φάκελοι μας προστέθηκαν στην staging area τρέχοντας ξανά την εντολή <span class="inlineCode">git status -s</span>.</p>
         <div class="code">
-            $ ~/cats  git status -s
+            ~/cats $  git status -s
             <div class="output">
                 <span class="green">A</span>  giannis/desc.txt
                 <span class="green">A</span>  giannis/giannis.jpg
                 <span class="green">A</span>  mitsos/desc.txt
                 <span class="green">A</span>  mitsos/mitsos.jpg
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Τώρα δίπλα από κάθε αρχείο εμφανίζεται ένα «Α» απο το «Added» που σημαίνει ότι τα αρχεία έχουν προστεθεί στην staging area.</p>
         <p>Θα μπορούσαμε φυσικά να προσθέσουμε κάθε φάκελο ξεχωριστά αντί να χρησιμοποιήσουμε την παράμετρο <span class="inlineCode">.</span> παίρνοντας το ίδιο αποτέλεσμα.</p>
         <div class="code">
-            $ ~/cats  git add mitsos
-            $ ~/cats  git add giannis
-            $ ~/cats  git status -s
+            ~/cats $  git add mitsos
+            ~/cats $  git add giannis
+            ~/cats $  git status -s
             <div class="output">
                 <span class="green">A</span>  giannis/desc.txt
                 <span class="green">A</span>  giannis/giannis.jpg
                 <span class="green">A</span>  mitsos/desc.txt
                 <span class="green">A</span>  mitsos/mitsos.jpg
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <h2>commit</h2>
         <p>Δεν έχουμε αποθηκεύσει όμως καμία εικόνα ακόμα. Έχουμε τις πληροφορίες για την εικόνα που θέλουμε να αποθηκεύσουμε στην staging area, οπότε το μόνο που μας μένει είναι να την αποθηκεύσουμε.</p>
@@ -113,7 +113,7 @@
         <p>Αν δεν δοθεί η παράμετρος <span class="inlineCode">-m</span> τότε θα ανοίξει καινούριο παράθυρο όπου εκεί θα γράψετε το message.</p>
         <p>Προς το παρόν το git δεν έχει καμία αποθηκευμένη εικόνα, οπότε ας δημιουργήσουμε την πρώτη.</p>
         <div class="code">
-            $ ~/cats  git commit -m 'Add mitsos and giannis'
+            ~/cats $  git commit -m 'Add mitsos and giannis'
             <div class="output">
                 [master (root-commit) 445eeae] Add my favourite cats
                 4 files changed, 2 insertions(+)
@@ -122,12 +122,12 @@
                 create mode 100644 mitsos/desc.txt
                 create mode 100644 mitsos/mitsos.jpg
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Εκτελώντας τώρα <span class="inlineCode">git status -s</span> βλέπουμε πως δεν υπάρχει έξοδος.</p>
         <div class="code">
-            $ ~/cats  git status -s
-            $ ~/cats
+            ~/cats $  git status -s
+            ~/cats $
         </div>
         <p>Αυτό συμβαίνει γιατί η εντολή <span class="inlineCode">git status</span> μας εμφανίζει τι μπορεί να προστεθεί στην staging area ή αν αυτή περιέχει πληροφορίες για να δημιουργηθεί μια νέα εικόνα.</p>
         <p>Για αυτόν τον λόγο αφού δημιουργήσαμε μια νέα εικόνα με τις πληροφορίες που υπήρχαν στην staging area και δεν υπάρχουν καινούριες αλλαγές να προστεθούν σε αυτή, η εντολή <span class="inlineCode">git status -s</span> δεν μας δίνει καμία έξοδο.</p>
@@ -135,44 +135,44 @@
         <p>Ας κάνουμε κάποιες αλλαγές στα αρχεία μας για εξάσκηση.</p>
         <p>Θα χρησιμοποιήσω την εντολή <a href="http://www.cyberciti.biz/faq/linux-unix-appleosx-bsd-cat-command-examples/">cat</a> για να δω τα περιεχόμενα της περιγραφής του Μήτσου.</p>
         <div class="code">
-            $ ~/cats  cat mitsos/desc.txt
+            ~/cats $  cat mitsos/desc.txt
             <div class="output">
                 O Μήτσος είναι ένας υπέροχος μαύρος γάτος.
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Αλλά ο Μήτσος είναι και έξυπνος. Ας το προσθέσω και αυτό στην περιγραφή. Θα χρησιμοποιήσω τον text editor <a href="http://en.wikipedia.org/wiki/Vi">vi</a> για να κάνω αυτή την αλλαγή.</p>
         <div class="code">
-            $ ~/cats  vi mitsos/desc.txt
-            $ ~/cats  cat mitsos/desc.txt
+            ~/cats $  vi mitsos/desc.txt
+            ~/cats $  cat mitsos/desc.txt
             <div class="output">
                 O Μήτσος είναι ένας υπέροχος και έξυπνος μαύρος γάτος.
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Αν εκτελέσουμε την εντολή <span class="inlineCode">git status -s</span> θα πάρουμε αυτή την έξοδο.</p>
         <div class="code">
-            $ ~/cats  git status -s
+            ~/cats $  git status -s
             <div class="output">
                 <span class="red">M</span> mitsos/desc.txt
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Το M από το «Modified» σημαίνει πως έχουν γίνει αλλαγές σε αυτό το αρχείο, οπότε υπάρχουν αλλαγές που μπορούν να προστεθούν στην staging area.</p>
         <p>Ας χρησιμοποιήσουμε την εντολή <span class="inlineCode">git add</span> για να προσθέσουμε την αλλαγή στο περιεχόμενο του αρχείου «desc.txt» που βρίσκεται στον φάκελο «mitsos» στην staging area και ας δημιουργήσουμε με τις καινούριες πληροφορίες που απέκτησε η staging area μια εικόνα η οποία θα αποθηκευτεί στο git repository μας με την εντολή <span class="inlineCode">git commit</span>.</p>
         <div class="code">
-            $ ~/cats  git add mitsos/desc.txt
-            $ ~/cats  git status -s
+            ~/cats $  git add mitsos/desc.txt
+            ~/cats $  git status -s
             <div class="output">
                 <span class="green">M</span> mitsos/desc.txt
             </div>
-            $ ~/cats  git commit -m 'Add a new description for mitsos'
+            ~/cats $  git commit -m 'Add a new description for mitsos'
             <div class="output">
                 [master 3d39595] Add a new description for mitsos
                  1 file changed, 1 insertion(+), 1 deletion(-)
             </div>
-            $ ~/cats  git status -s
-            $ ~/cats
+            ~/cats $  git status -s
+            ~/cats $
         </div>
         <p>Αν κοιτάξετε την έξοδο καλύτερα θα παρατηρήσετε πως πριν προσθέσουμε τις αλλαγές στην staging area το «Μ» που εμφανιζόταν δίπλα από το όνομα του αρχείου όταν εκτελούσαμε την εντολή <span class="inlineCode">git status -s</span> ήταν κόκκινο, ενώ αφού το προσθέσαμε έγινε πράσινο. Αυτός είναι ο τρόπος του git να μας δείχνει ποια αρχεία ή ποιες αλλαγές έχουν προστεθεί στην staging area και ποια/ποιες όχι.</p>
         <p>Η αλήθεια είναι πως δεν μου αρέσει ο Γιάννης, οπότε λέω να τον διαγράψω απ' την λίστα με τις γάτες μου.</p>
@@ -180,29 +180,29 @@
         <p>Να χρησιμοποιήσω την εντολή <span class="inlineCode">git rm</span> ή την εντολή <span class="inlineCode">rm</span>.</p>
         <p>Η εντολή <span class="inlineCode">git rm</span> έχει το πλεονέκτημα πως αν την εκτελέσω οι αλλαγές προστίθενται κατευθείαν στην staging area.</p>
         <div class="code">
-            $ ~/cats  git rm -R giannis
+            ~/cats $  git rm -R giannis
             <div class="output">
                 <span class="green">rm 'giannis/desc.txt'</span>
                 <span class="green">rm 'giannis/giannis.jpg'</span>
             </div>
-            $ ~/cats git commit -m 'Remove giannis'
+            ~/cats $ git commit -m 'Remove giannis'
             <div class="output">
                 [master 8c67bb3] Remove giannis
                 2 files changed, 1 deletion(-)
                 delete mode 100644 giannis/desc.txt
                 delete mode 100644 giannis/giannis.jpg
             </div>
-            $ ~/cats 
+            ~/cats $ 
         </div>
         <p>Αν χρησιμοποιήσουμε την εντολή <span class="inlineCode">rm</span> θα πρέπει να προσθέσουμε τις αλλαγές μόνοι μας στην staging area.</p>
         <div class="code">
-            $ ~/cats  rm -R giannis
-            $ ~/cats  git status -s
+            ~/cats $  rm -R giannis
+            ~/cats $  git status -s
             <div class="output">
                 <span class="red">D</span> giannis/desc.txt
                 <span class="red">D</span> giannis/giannis.jpg
             </div>
-            $ ~/cats  git add .
+            ~/cats $  git add .
             <div class="output">
                 warning: You ran 'git add' with neither '-A (--all)' or '--ignore-removal',
                 whose behaviour will change in Git 2.0 with respect to paths you removed.
@@ -216,32 +216,32 @@
 
                 Run 'git status' to check the paths you removed from your working tree.
             </div>
-            $ ~/cats  git status -s
+            ~/cats $  git status -s
             <div class="output">
                 <span class="red">D</span> giannis/desc.txt
                 <span class="red">D</span> giannis/giannis.jpg
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Το «D» από το «Deleted» σημαίνει πως το αρχείο έχει διαγραφεί.</p>
         <p>Βλέπουμε πως η εντολή <span class="inlineCode">git add .</span> δεν δούλεψε.</span>
         <p>Αυτό συμβαίνει γιατί το git για λόγους ασφαλείας δεν μας αφήνει να προσθέσουμε τις διαγραφές αν δεν έχουμε χρησιμοποιήσει την παράμετρο <span class="inlineCode">-A</span>.</p>
         <p>Ας δοκιμάσουμε να προσθέσουμε τις διαγραφές ξανά αλλά αυτήν την φορά με την εντολή <span class="inlineCode">git add . -A</span>.</p>
         <div class="code">
-            $ ~/cats  git add . -A
-            $ ~/cats  git status -s
+            ~/cats $  git add . -A
+            ~/cats $  git status -s
             <div class="output">
                 <span class="green">D</span> giannis/desc.txt
                 <span class="green">D</span> giannis/giannis.jpg
             </div>
-            $ ~/cats  git commit -m 'Remove giannis'
+            ~/cats $  git commit -m 'Remove giannis'
             <div class="output">
                 [master 8c67bb3] Remove giannis
                 2 files changed, 1 deletion(-)
                 delete mode 100644 giannis/desc.txt
                 delete mode 100644 giannis/giannis.jpg
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <h2>remote</h2>
         <p>Τώρα που αποθηκεύσαμε διάφορες εικόνες στο git repository μας συνήθως θα θέλαμε να τις ανεβάσουμε σε ένα online git repository.</p>
@@ -258,22 +258,22 @@
         <p>Το git περιέχει remotes. Ένα remote περιέχει το URL ενός online git repository. Ουσιαστικά ένα remote είναι ένας σύνδεσμος. Συνδέει το τοπικό git repository με το online git repository ώστε να μπορούμε να ανεβάσουμε τις αποθηκευμένες εικόνες μας εκεί. Το online git repository περιέχει όλες τις εικόνες που έχουμε αποφασίσει να ανεβάσουμε.</p>
         <p>Αν εκτελέσουμε την εντολή <span class="inlineCode">git remote</span> μας εμφανίζει μια λίστα από τα remotes που έχει το git repository μας.</p>
         <div class="code">
-            $ ~/cats  git remote
-            $ ~/cats
+            ~/cats $  git remote
+            ~/cats $
         </div>
         <p>Όπως βλέπετε δεν μας βγάζει κανένα remote γιατί δεν έχουμε δημιουργήσει κανένα. Για να δημιουργήσουμε ένα χρησιμοποιούμε την εντολή <span class="inlineCode">git remote add [remote_name] [url]</span> όπου <span class="inlineCode">remote_name</span> το όνομα που δίνουμε στο remote και <span class="inlineCode">url</span> το URL του remote.</p>
         <div class="code">
-            $ ~/cats  git remote add origin git@github.com:VitSalis/git-guide.git
-            $ ~/cats  git remote
+            ~/cats $  git remote add origin git@github.com:VitSalis/git-guide.git
+            ~/cats $  git remote
             <div class="output">
                 origin
             </div>
-            $ ~/cats  git remote -v
+            ~/cats $  git remote -v
             <div class="output">
                 origin  git@github.com:VitSalis/git-guide.git (fetch)
                 origin  git@github.com:VitSalis/git-guide.git (push)
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Αν δώσουμε την παράμετρο <span class="inlineCode">-v</span> στην εντολή <span class="inlineCode">git remote</span> τότε μας δείχνει εκτός από το όνομα του remote και το URL του.</p>
         <p>Τώρα έχουμε ένα online git repository και έχουμε φτιάξει ένα remote. Το μόνο που μας μένει είναι να ανεβάσουμε τις αποθηκευμένες εικόνες μας μέσω αυτού.</p>
@@ -283,7 +283,7 @@
         <p>Ως δεύτερη παράμετρος δεν είναι πάντα η <span class="inlineCode">master</span> αλλά αυτό θα το καλύψω σε μελλοντικές εκδόσεις αυτού του οδηγού.</p>
         <p>Η εντολή push απλά παίρνει τις αποθηκευμένες εικόνες και τις ανεβάζει στο online git repository.</p>
         <div class="code">
-            $ ~/cats  git push origin master
+            ~/cats $  git push origin master
             <div class="output">
                 Counting objects: 8, done.
                 Delta compression using up to 4 threads.
@@ -293,7 +293,7 @@
                 To git@github.com:VitSalis/git-guide.git
                  * [new branch]      master -&gt; master
             </div>
-            $ ~/cats
+            ~/cats $
         </div>
         <p>Αν επισκεφθείτε το online git repository σας τώρα θα δείτε την τελευταία εικόνα που αποθηκεύσατε και αν κοιτάξετε τα commits θα δείτε όλες τις εικόνες που είχατε αποθηκεύσει τοπικά, με τα αντίστοιχα μηνύματα.</p>
         <p>Αυτό ήταν! Τώρα μπορώ να μοιραστώ τις γάτες μου με όλο τον κόσμο!</p>
