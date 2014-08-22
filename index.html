@@ -49,7 +49,7 @@
         <p>Όπως είπαμε το git αφορά την διαχείριση αρχείων και φακέλων αποθηκεύοντας την κατάσταση τους σε εικόνες, οπότε ας πάμε σε έναν φάκελο στον υπολογιστή μας που θα τον ονομάσουμε «cats».</p>
         <p>Στον φάκελο «cats», όπως προδίδει το όνομα, θα αποθηκεύουμε πράγματα σχετικά με γάτες. Θα φτιάξουμε δύο υποφάκελους, τους «mitsos» και «giannis» οι οποίοι περιέχουν πληροφορίες για τις δυο γάτες μου, τον Μήτσο και τον Γιάννη αντίστοιχα. Κάθε υποφάκελος θα περιέχει ένα αρχείο που ονομάζεται «desc.txt» το οποίο είναι μια περιγραφή της συγκεκριμένης γάτας.</p>
         <p>Το αρχείο «desc.txt» στον υποφάκελο «mitsos» θα περιέχει την περιγραφή «Ο Μήτσος είναι ένας υπέροχος μαύρος γάτος.», ενώ το αρχείο «desc.txt» στον υποφάκελο «giannis» θα περιέχει την περιγραφή «Ο Γιάννης αγαπάει την γυμναστική.»</p>
-        <p>Θα σας πρότεινα να φτιάξετε έναν ίδιο φάκελο με αυτόν που περιέγραψα, έτσι ώστε να μπορείτε να δοκιμάζετε αυτά που μαθαίνετε.</p>
+        <p>Θα σας πρότεινα να φτιάξετε έναν ίδιο φάκελο με αυτόν που περιέγραψα. Αφού το κάνετε αυτό ανοίξτε το τερματικό ή το git bash σε αυτόν τον φάκελο έτσι ώστε να μπορείτε να δοκιμάζετε τα παραδείγματα.</p>
         <p>Αυτά είναι τα περιεχόμενα του φακέλου μας.</p>
         <div class="code">
             ~/cats $  ls -R
@@ -125,11 +125,11 @@
         <h2>commit</h2>
         <p>Δεν έχουμε αποθηκεύσει όμως καμία εικόνα ακόμα. Έχουμε τις πληροφορίες για την εικόνα που θέλουμε να αποθηκεύσουμε στην staging area, οπότε το μόνο που μας μένει είναι να την αποθηκεύσουμε.</p>
         <p>Για να το κάνουμε αυτό θα χρησιμοποιήσουμε την εντολή <span class="inlineCode">git commit</span>.</p>
-        <p>Η εντολή <span class="inlineCode">git commit</span> χρησιμοποιεί τις πληροφορίες για τα αρχεία που υπάρχουν στην staging area για να δημιουργήσει μια νέα εικόνα την οποία αποθηκεύει μόνιμα στο git repository. Μπορεί να πάρει ως παράμετρο <span class="inlineCode">-m 'message'</span> όπου message το μήνυμα που εξηγεί τις αλλαγές από την προηγούμενη αποθηκευμένη εικόνα. Αυτό μας δίνει την δυνατότητα να μπορούμε να εξηγούμε τις αλλαγές που κάναμε στην ομάδα μας για να κάνουμε την συνεργασία ευκολότερη και λιγότερο χρονοβόρα.</p>
+        <p>Η εντολή <span class="inlineCode">git commit</span> χρησιμοποιεί τις πληροφορίες για τα αρχεία που υπάρχουν στην staging area για να δημιουργήσει μια νέα εικόνα την οποία αποθηκεύει μόνιμα στο git repository. Μπορεί να πάρει ως παράμετρο <span class="inlineCode">-m "message"</span> όπου message το μήνυμα που εξηγεί τις αλλαγές από την προηγούμενη αποθηκευμένη εικόνα. Αυτό μας δίνει την δυνατότητα να μπορούμε να εξηγούμε τις αλλαγές που κάναμε στην ομάδα μας για να κάνουμε την συνεργασία ευκολότερη και λιγότερο χρονοβόρα.</p>
         <p>Αν δεν δοθεί η παράμετρος <span class="inlineCode">-m</span> τότε θα ανοίξει καινούριο παράθυρο όπου εκεί θα γράψετε το message.</p>
         <p>Προς το παρόν το git δεν έχει καμία αποθηκευμένη εικόνα, οπότε ας δημιουργήσουμε την πρώτη.</p>
         <div class="code">
-            ~/cats $  git commit -m 'Add mitsos and giannis'
+            ~/cats $  git commit -m "Add mitsos and giannis"
             <div class="output">
                 [master (root-commit) 445eeae] Add my favourite cats
                 2 files changed, 2 insertions(+)
@@ -155,7 +155,7 @@
             </div>
             ~/cats $
         </div>
-        <p>Αλλά ο Μήτσος είναι και έξυπνος. Ας το προσθέσω και αυτό στην περιγραφή. Θα χρησιμοποιήσω τον text editor <a href="http://en.wikipedia.org/wiki/Vi">vi</a> για να κάνω αυτή την αλλαγή. Φυσικά εσείς μπορείτε να χρησιμοποιήσετε όποιον text editor θέλετε. Αφού κάνω τις αλλαγές μου η περιγραφή θα αλλάξει σε «O Μήτσος είναι ένας υπέροχος και έξυπνος μαύρος γάτος.»</p>
+        <p>Αλλά ο Μήτσος είναι και έξυπνος. Ας το προσθέσω και αυτό στην περιγραφή. Θα χρησιμοποιήσω τον text editor <a href="http://en.wikipedia.org/wiki/Vi">vi</a> για να κάνω αυτή την αλλαγή. Φυσικά εσείς μπορείτε να χρησιμοποιήσετε όποιον text editor θέλετε. Επίσης μπορείτε αντι για το τερματικό ή το git bash να χρησιμοποιήσετε την διεπαφή του λειτουργικού σας συστήματος. Αφού κάνω τις αλλαγές μου η περιγραφή θα αλλάξει σε «O Μήτσος είναι ένας υπέροχος και έξυπνος μαύρος γάτος.»</p>
         <div class="code">
             ~/cats $  vi mitsos/desc.txt
             ~/cats $  cat mitsos/desc.txt
@@ -180,7 +180,7 @@
             <div class="output">
                 <span class="green">M</span> mitsos/desc.txt
             </div>
-            ~/cats $  git commit -m 'Add a new description for mitsos'
+            ~/cats $  git commit -m "Add a new description for mitsos"
             <div class="output">
                 [master 3d39595] Add a new description for mitsos
                  1 file changed, 1 insertion(+), 1 deletion(-)
@@ -202,7 +202,7 @@
             <div class="output">
                 <span class="green">D</span> 'giannis/desc.txt'
             </div>
-            ~/cats $ git commit -m 'Remove giannis'
+            ~/cats $ git commit -m "Remove giannis"
             <div class="output">
                 [master 8c67bb3] Remove giannis
                 1 files changed, 1 deletion(-)
@@ -251,7 +251,7 @@
             <div class="output">
                 <span class="green">D</span> giannis/desc.txt
             </div>
-            ~/cats $  git commit -m 'Remove giannis'
+            ~/cats $  git commit -m "Remove giannis"
             <div class="output">
                 [master 8c67bb3] Remove giannis
                 1 files changed, 1 deletion(-)
@@ -309,6 +309,7 @@
         <p>Σε αυτό χρησιμεύει η εντολή <span class="inlineCode">git push [remote_name] master</span> όπου <span class="inlineCode">remote_name</span> το όνομα του remote που περιέχει το URL του online git repository όπου θέλουμε να ανέβουν οι εικόνες.</p>
         <p>Ως <span class="inlineCode">remote_name</span> θα χρησιμοποιήσω «origin», που είναι το όνομα του remote που φτιάξαμε πριν.</span>
         <p>Η εντολή push απλά παίρνει τις αποθηκευμένες εικόνες και τις ανεβάζει στο online git repository.</p>
+        <p>Κάθε φορά που δημιουργείτε καινούριες εικόνες, για να ανέβουν στο online git repository σας θα πρέπει να εκτελείτε την εντολή <span class="inlineCode">git push</span>.</p>
         <div class="code">
             ~/cats $  git push origin master
             <div class="output">
