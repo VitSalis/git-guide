@@ -51,7 +51,7 @@
             </div>
             ~/cats $
         </div>
-        <p>Ότι βρίσκεται πριν απο το <span class="inlineCode">$</span> μας δείχνει σε ποιον φάκελο βρισκόμαστε, στην περίπτωση μας βρισκόμαστε στον φάκελο <span class="inlineCode">cats</span> που έχουμε δημιουργήσει, ενω ότι βρίσκεται μετά το <span class="inlineCode">$</span> είναι η εντολή που εκτελούμε. Τώρα εκτελέσαμε την εντολή <span class="inlineCode">ls -R</span>.</p>
+        <p>Ότι βρίσκεται πριν από το <span class="inlineCode">$</span> μας δείχνει σε ποιον φάκελο βρισκόμαστε, στην περίπτωση μας βρισκόμαστε στον φάκελο <span class="inlineCode">cats</span> που έχουμε δημιουργήσει, ενώ ότι βρίσκεται μετά το <span class="inlineCode">$</span> είναι η εντολή που εκτελούμε. Τώρα εκτελέσαμε την εντολή <span class="inlineCode">ls -R</span>.</p>
         <p>Για όσους δεν την γνωρίζουν, η εντολή <span class="inlineCode">ls</span> μας εμφανίζει τα περιεχόμενα του φακέλου στον οποίο βρισκόμαστε και αν δώσουμε την παράμετρο <span class="inlineCode">-R</span> μας το κάνει <a href="http://el.wikipedia.org/wiki/%CE%91%CE%BD%CE%B1%CE%B4%CF%81%CE%BF%CE%BC%CE%AE">αναδρομικά</a>.</p>
         <p>Αυτή η κατάσταση του φακέλου και των αρχείων που περιέχει, όπως είπαμε πριν, είναι η εικόνα του φακέλου. Ο μόνος τρόπος για να αλλάξει η εικόνα του φακέλου θα ήταν να κάνουμε κάποια αλλαγή σε αυτόν π.χ να προσθέσουμε ένα αρχείο, να αλλάξουμε το περιεχόμενο κάποιου ήδη υπάρχοντος κλπ.</p>
         <p>Έναν φάκελο στον υπολογιστή μας μπορούμε να τον κάνουμε ένα git repository έτσι ώστε να μπορούμε να χρησιμοποιήσουμε όλα τα εργαλεία του git μέσα σε αυτόν.</p>
@@ -66,14 +66,14 @@
         <p>Η έξοδος μας λέει πως ο φάκελος μας έγινε επιτυχώς ένα άδειο (χωρίς καμία αποθηκευμένη εικόνα) git repository δίνοντάς μας πρόσβαση σε όλα τα εργαλεία του git.</p>
         <h2>config</h2>
         <p>Κάθε εικόνα που αποθηκεύεται περιέχει επίσης το όνομα και το email αυτού που την δημιούργησε. Ο λόγος που γίνεται αυτό είναι ώστε εσείς και οι συνεργάτες σας να μπορείτε να βλέπετε ποιος έκανε τι.</p>
-        <p>Οπότε πρέπει να ρυθμίσουμε στο git το όνομα και το email μας ώστε να συμπεριληφθούν στις εικόνες που θα δημιουργήσουμε.</p>
+        <p>Οπότε πρέπει να ρυθμίσουμε στο git το όνομα και το email μας ώστε να συμπεριληφθούν στις εικόνες που θα αποθηκεύσουμε.</p>
         <p>Αυτό το κάνουμε με την εντολή <span class="inlineCode">git config</span>.</p>
-        <p>Η εντολή αυτή όμως ορίζει τις ρυθμίσεις μόνο στο git repository στο οποίο βρισκόμαστε τώρα. Για να ορίσουμε τις ρυθμίσεις σε κάθε repository που δημιουργούμε δίνουμε την παράμετρο <span class="inlineCode">--global</span>.</p>
-        <p>Για να ορίσουμε το όνοματεπώνυμο μας χρησιμοποιούμε την παράμετρο <span class="inlineCode">user.name "Your FullName"</span>.</p>
+        <p>Η εντολή αυτή όμως ορίζει τις ρυθμίσεις μόνο στο git repository στο οποίο βρισκόμαστε τώρα. Για να έχουμε τις ρυθμίσεις αυτές σε κάθε repository που δημιουργούμε και χρησιμοποιούμε δίνουμε την παράμετρο <span class="inlineCode">--global</span>.</p>
+        <p>Για να ορίσουμε το ονοματεπώνυμο μας χρησιμοποιούμε την παράμετρο <span class="inlineCode">user.name "Your FullName"</span>.</p>
         <div class="code">
             ~/cats $  git config --global user.name "Your FullName"
         </div>
-        <p>Όπου <span class="inlineCode">Your FullName</span> το όνοματεπωνυμο σας (στην περίπτωση μου Vitalis Salis).</p>
+        <p>Όπου <span class="inlineCode">Your FullName</span> το ονοματεπώνυμο σας (στην περίπτωση μου Vitalis Salis).</p>
         <p>Για να ορίσουμε το email μας χρησιμοποιούμε την παράμετρο <span class="inlineCode">user.email "Your_Email"</span>.</p>
         <div class="code">
             ~/cats $  git config --global user.email "Your_Email"
@@ -112,7 +112,7 @@
             </div>
             ~/cats $
         </div>
-        <p>Τώρα δίπλα από κάθε αρχείο εμφανίζεται ένα «Α» απο το «Added» που σημαίνει ότι τα αρχεία έχουν προστεθεί στην staging area.</p>
+        <p>Τώρα δίπλα από κάθε αρχείο εμφανίζεται ένα «Α» από το «Added» που σημαίνει ότι τα αρχεία έχουν προστεθεί στην staging area.</p>
         <p>Θα μπορούσαμε φυσικά να προσθέσουμε κάθε φάκελο ξεχωριστά αντί να χρησιμοποιήσουμε την παράμετρο <span class="inlineCode">.</span> παίρνοντας το ίδιο αποτέλεσμα.</p>
         <div class="code">
             ~/cats $  git add mitsos
@@ -157,7 +157,7 @@
             </div>
             ~/cats $
         </div>
-        <p>Αλλά ο Μήτσος είναι και έξυπνος. Ας το προσθέσω και αυτό στην περιγραφή. Θα χρησιμοποιήσω τον text editor <a href="http://en.wikipedia.org/wiki/Vi">vi</a> για να κάνω αυτή την αλλαγή. Φυσικά εσείς μπορείτε να χρησιμοποιήσετε όποιον text editor θέλετε. Επίσης μπορείτε αντι για το τερματικό ή το git bash να χρησιμοποιήσετε την διεπαφή του λειτουργικού σας συστήματος. Αφού κάνω τις αλλαγές μου η περιγραφή θα αλλάξει σε «O Μήτσος είναι ένας υπέροχος και έξυπνος μαύρος γάτος.»</p>
+        <p>Αλλά ο Μήτσος είναι και έξυπνος. Ας το προσθέσω και αυτό στην περιγραφή. Θα χρησιμοποιήσω τον text editor <a href="http://en.wikipedia.org/wiki/Vi">vi</a> για να κάνω αυτή την αλλαγή. Φυσικά εσείς μπορείτε να χρησιμοποιήσετε όποιον text editor θέλετε. Επίσης μπορείτε αντί για το τερματικό ή το git bash να χρησιμοποιήσετε την διεπαφή του λειτουργικού σας συστήματος. Αφού κάνω τις αλλαγές μου η περιγραφή θα αλλάξει σε «O Μήτσος είναι ένας υπέροχος και έξυπνος μαύρος γάτος.»</p>
         <div class="code">
             ~/cats $  vi mitsos/desc.txt
             ~/cats $  cat mitsos/desc.txt
@@ -214,7 +214,7 @@
             ~/cats $ 
         </div>
         <p>Το «D» από το «Deleted» σημαίνει πως το αρχείο έχει διαγραφεί.</p>
-        <p>Όπως βλέπετε τα αρχείο διαγράφηκε και οι αλλαγές προστέθηκαν στην staging area. Έπειτα αποθηκευσαμε τις πληροφοριές στην staging area σε μια εικόνα με την εντολή <span class="inlineCode">git commit</span>.</p>
+        <p>Όπως βλέπετε τα αρχείο διαγράφηκε και οι αλλαγές προστέθηκαν στην staging area. Έπειτα αποθηκεύσαμε τις πληροφορίες στην staging area σε μια εικόνα με την εντολή <span class="inlineCode">git commit</span>.</p>
         <p>Έχουμε όμως και την εναλλακτική να χρησιμοποιήσουμε την εντολή <span class="inlineCode">rm</span>.</p>
         <p>Αν χρησιμοποιήσατε την εντολή <span class="inlineCode">git rm</span> ήδη, δεν υπάρχει νοήμα να χρησιμοποιήσετε την παρακάτω εντολή διότι τα αρχεία έχουν ήδη διαγραφεί.</p>
         <p>Αν χρησιμοποιήσουμε την εντολή <span class="inlineCode">rm</span> θα πρέπει να προσθέσουμε τις αλλαγές μόνοι μας στην staging area.</p>
@@ -275,22 +275,22 @@
             <li>Τα project που δημοσιοποιούνται είναι πιθανότατα πιο ασφαλή διότι η κοινότητα βοηθάει να βρεθούν λάθη.</li>
         </ul>
         <p>Σε αυτόν τον οδηγό θα χρησιμοποιήσω το <a href="https://github.com">GitHub</a>.</p>
-        <p>Για να χρησιμοποιήσετε το GitHub θα πρέπει να ακολουθήσετε αυτά τα βήματα:</p>
+        <p>Για να χρησιμοποιήσετε το GitHub θα πρέπει να ακολουθήσετε τα παρακάτω βήματα:</p>
         <ol>
             <li><a href="https://github.com/join">Δημιουργήστε λογαριασμό</a>.</li>
-            <li><a href="https://help.github.com/articles/create-a-repo">Δημιουργήστε ένα git repository</a>.</li>
+            <li><a href="https://help.github.com/articles/create-a-repo">Δημιουργήστε ένα online git repository</a>.</li>
             <li><a href="https://help.github.com/articles/generating-ssh-keys">Δημιουργήστε ένα ssh key</a> και προσθέστε το στον λογαριασμό σας στο GitHub, ώστε να μπορείτε να ανεβάζετε μόνο εσείς τις εικόνες σας στο οnline git repository σας.</li>
         </ol>
-        <p>Όλα τα git repositories είναι ίσα. Εμείς απλά τα συγχρονίζουμε μεταξύ τους. Αυτό είναι χρήσιμο ώστε να μπορούμε να έχουμε περισσότερα απο ένα online git repositories. Για να μην χρησιμοποιούμε το URL του online git repository που θέλουμε να χρησιμοποιήσουμε κάθε φορά, το git μας επιτρέπει να αποθηκεύσουμε ένα όνομα για κάθε URL ενός online git repository που θέλουμε να χρησιμοποιήσουμε.</p>
-        <p>Αυτός ο συνδιασμός όνομα-URL είναι ένα remote.</p>
+        <p>Όλα τα git repositories είναι ίσα. Εμείς απλά τα συγχρονίζουμε μεταξύ τους. Αυτό είναι χρήσιμο ώστε να μπορούμε να έχουμε περισσότερα από ένα online git repositories. Για να μην χρησιμοποιούμε το URL του online git repository που θέλουμε να χρησιμοποιήσουμε κάθε φορά, το git μας επιτρέπει να αποθηκεύσουμε ένα όνομα για κάθε URL ενός online git repository που θέλουμε να χρησιμοποιήσουμε.</p>
+        <p>Αυτός ο συνδυασμός όνομα-URL είναι ένα remote.</p>
         <p>Αν εκτελέσουμε την εντολή <span class="inlineCode">git remote</span> μας εμφανίζει μια λίστα από τα ονόματα των remotes που έχει το git repository μας.</p>
         <div class="code">
             ~/cats $  git remote
             ~/cats $
         </div>
         <p>Όπως βλέπετε δεν μας βγάζει κανένα όνομα γιατί δεν έχουμε δημιουργήσει κανένα remote. Για να δημιουργήσουμε ένα χρησιμοποιούμε την εντολή <span class="inlineCode">git remote add [remote_name] [url]</span> όπου <span class="inlineCode">remote_name</span> το όνομα που δίνουμε στο remote και <span class="inlineCode">url</span> το URL του online git repository.</p>
-        <p>Για να βρείτε το URL του online git repository σας στο github, απλά πηγαίντε στα repositories σας και θα σας το εμφανίσει εκεί.</p>
-        <p>Σε αυτό τον οδηγό θα χρησιμοποιήσω ως <span class="inlineCode">url</span> το URL του repository <span class="inlineCode">git-guide</span> που έχω δημιουργήσει στον GitHub λογαριασμό μου(<a href="https://github.com/vitsalis/">VitSalis</a>) και ως <span class="inlineCode">remote_name</span> «origin».</p>
+        <p>Για να βρείτε το URL του online git repository σας στο GitHub, απλά πηγαίντε στα online repositories σας μέσω της διεπαφής της ιστοσελίδας του και θα σας το εμφανίσει εκεί.</p>
+        <p>Σε αυτό τον οδηγό θα χρησιμοποιήσω ως <span class="inlineCode">url</span> το URL του repository <span class="inlineCode">git-guide</span> που έχω δημιουργήσει στον GitHub λογαριασμό μου (<a href="https://github.com/vitsalis/">VitSalis</a>) και ως <span class="inlineCode">remote_name</span> το όνομα «origin».</p>
         <p>Προσοχή! Μην χρησιμοποιήσετε το URL του δικού μου online git repository, αλλά αυτού που δημιουργήσατε.</p>
         <div class="code">
             ~/cats $  git remote add origin https://github.com/VitSalis/git-guide.git
