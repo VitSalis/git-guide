@@ -3,6 +3,9 @@ body {
     font-family: Droid Sans, Trebuchet MS;
     margin: 0;
 }
+.content {
+    margin: 0 15px;
+}
 .code {
     white-space: pre-line;
     background-color: white;
